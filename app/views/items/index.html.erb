@@ -1,0 +1,16 @@
+<h1>index</h1>
+<h2>show panel</h2>
+<ul id="show_panel">
+</ul>
+<hr>
+<h2>control panel</h2>
+<ul id="control_panel">
+  <%@items.each do |item| %>
+    <li>
+      <%=item.name%>: 
+      <button data-add="<%=item.id%>">+</button> 
+      <span data-number="<%=item.number%>" id="control-item-<%=item.id%>"><%= item.number%></span> 
+      <button data-sub="<%=item.id%>" >-</button>
+    </li>
+  <%end%>
+</ul>
